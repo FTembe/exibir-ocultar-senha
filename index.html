@@ -9,7 +9,7 @@
 	<section>
 	
 	<div class="pass-group">
-		<input type="password" name=""><button type="button">show</button>
+		<input type="password" id="password" placeholder="insira sua senha"><button type="button" id="button-status">show</button>
 	</div>
 	<div class="copyright">
 		Ocultar e Exibir Password <br>
@@ -18,19 +18,22 @@
 	</section>
 </body>
 <script type="text/javascript">
-	let button=document.querySelector('button'),
-	    input = document.querySelector('input')
+	let button=document.querySelector('#button-status'),
+	    input = document.querySelector('#password')
 
 	button.addEventListener('click', function(){
-
-	if(input.type=='password'){
-		input.type='text'
-		button.innerText='hide'
-		return true
-	}
+		if(input.value.length>0){
+			if(input.type=='password'){
+			input.type='text'
+			button.innerText='hide'
+			return true
+		}
 		input.type='password'
 		button.innerText='show'
-	})
+		}else{
+			alert('O campo da senha esta vázio')
+		}
+	})	
 </script>
 <style type="text/css">
 		*{
