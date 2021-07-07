@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Ocultar e Exibir Password</title>
+</head>
+<body>
+	<section>
+	
+	<div class="pass-group">
+		<input type="password" name=""><button type="button">show</button>
+	</div>
+	<div class="copyright">
+		Ocultar e Exibir Password <br>
+	Francisco Tembe
+	</div>
+	</section>
+</body>
+<script type="text/javascript">
+	let button=document.querySelector('button'),
+	    input = document.querySelector('input')
+
+	button.addEventListener('click', function(){
+
+	if(input.type=='password'){
+		input.type='text'
+		button.innerText='hide'
+		return true
+	}
+		input.type='password'
+		button.innerText='show'
+	})
+</script>
+<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			outline: none;
+			color: #fff;font-family: 'Courier New', Courier, monospace;
+		}
+		body{
+			width: 100%;
+			height: 100vh;
+			
+
+			
+		}
+		section{
+				width: 100%;
+			height: 100%;
+			background: #3256a1;
+			display: flex;flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			
+		}
+		.pass-group{	
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+		}
+	
+		input
+		{
+			width: 50%;
+		}
+
+		input, button{
+			border: none;
+			height: 40px;color: #000;
+
+		}
+		button{
+			padding:0 1rem ;
+			width: 5rem;
+			font-weight: 700;
+			border-top-right-radius: 20px;
+			border-bottom-right-radius: 20px;
+			cursor: pointer;
+			background-color: #f8f9fa;
+		}
+		input{
+			padding:0 0.1rem 0 1rem ;
+			border-top-left-radius: 20px;
+			border-bottom-left-radius: 20px;
+		}
+		.copyright{
+			font-size: 12px;
+			letter-spacing: 0.3px;
+		}
+	</style>
+</html>
