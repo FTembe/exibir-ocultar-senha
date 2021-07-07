@@ -9,7 +9,7 @@
 	<section>
 	
 	<div class="pass-group">
-		<input type="password" id="password" placeholder="insira sua senha"><button type="button" id="button-status">show</button>
+		<input type="password" id="password" placeholder="insira sua senha"><button type="button" id="button-status">Exibir</button>
 	</div>
 	<div class="copyright">
 		Ocultar e Exibir Password <br>
@@ -25,11 +25,11 @@
 		if(input.value.length>0){
 			if(input.type=='password'){
 			input.type='text'
-			button.innerText='hide'
+			button.innerText='Ocultar'
 			return true
 		}
 		input.type='password'
-		button.innerText='show'
+		button.innerText='Exibir'
 		}else{
 			alert('O campo da senha esta vázio')
 		}
